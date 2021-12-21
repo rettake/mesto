@@ -1,0 +1,13 @@
+.popup__submit {
+   max-width: 100%;
+   background-color: #000000;
+   color: white;
+   border-radius: 2px;
+   box-sizing: border-box;
+   padding: 14px 0 18px;
+   transition: opacity .3s linear;
+}
+
+.popup__submit:hover {
+   opacity: .8;
+}

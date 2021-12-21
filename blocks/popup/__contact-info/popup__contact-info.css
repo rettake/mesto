@@ -1,0 +1,6 @@
+.popup__contact-info {
+   display: flex;
+   flex-direction: column;
+   border: 0;
+   padding: 0;
+}

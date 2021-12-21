@@ -1,0 +1,4 @@
+.popup__container-outer {
+   display: flex;
+   flex-direction: column;
+}

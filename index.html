@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <link rel="stylesheet" href="pages/index.css">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Mesto</title>
+</head>
+<body class="page">
+   <header class="header">
+      <img src="images/Vector.svg" alt="Логотип сайта" class="header__logo">
+   </header>
+   <main class="content">
+      <section class="profile">
+         <div class="profile__person">
+            <img src="images/image.jpg" alt="Аватар профиля" class="profile__avatar">
+            <div class="profile__info">
+               <div class="profile__info-edit">
+                  <h1 class="profile__name">
+                     Жак-Ив Кусто
+                  </h1>
+                  <input type="image" src="images/Editbutton.svg" alt="Изменить" class="profile__edit">
+               </div>
+               <p class="profile__job">
+                  Исследователь океана
+               </p>
+            </div>
+         </div>
+         <input type="image" src="images/Addbutton.png" alt="Добавить" class="profile__addbutton">
+      </section>
+      <section class="elements">
+         <div class="element">
+            <img src="images/karachaevsk.jpg" alt="Карачаевск" class="element__image">
+            <div class="element__info">
+               <h3 class="element__place">
+                  Карачаевск
+               </h3>
+               <input type="image" src="images/likeicon.svg" alt="Лайк" class="element__like">
+            </div>
+         </div>
+
+         <div class="element">
+            <img src="images/elbrus.png" alt="Эльбрус" class="element__image">
+            <div class="element__info">
+               <h3 class="element__place">
+                  Гора Эльбрус
+               </h3>
+               <input type="image" src="images/likeicon.svg" alt="Лайк" class="element__like">
+            </div>
+         </div>
+
+         <div class="element">
+            <img src="images/dombay.png" alt="Домбай" class="element__image">
+            <div class="element__info">
+               <h3 class="element__place">
+                  Домбай
+               </h3>
+               <input type="image" src="images/likeicon.svg" alt="Лайк" class="element__like">
+            </div>
+         </div>
+
+         <div class="element">
+            <img src="images/elbrus.png" alt="Эльбрус" class="element__image">
+            <div class="element__info">
+               <h3 class="element__place">
+                  Гора Эльбрус
+               </h3>
+               <input type="image" src="images/likeicon.svg" alt="Лайк" class="element__like">
+            </div>
+         </div>
+
+         <div class="element">
+            <img src="images/dombay.png" alt="Домбай" class="element__image">
+            <div class="element__info">
+               <h3 class="element__place">
+                  Домбай
+               </h3>
+               <input type="image" src="images/likeicon.svg" alt="Лайк" class="element__like">
+            </div>
+         </div>
+
+         <div class="element">
+            <img src="images/karachaevsk.jpg" alt="Карачаевск" class="element__image">
+            <div class="element__info">
+               <h3 class="element__place">
+                  Карачаево-Черкесия
+               </h3>
+               <input type="image" src="images/likeicon.svg" alt="Лайк" class="element__like">
+            </div>
+         </div>
+      </section>
+   </main>
+   <footer class="footer">
+      <p class="footer__copyright">
+         © 2020 Mesto Russia
+      </p>
+   </footer>
+   <div class="popup">
+      <div class="popup__container-outer">
+         <input type="image" src="images/CloseIcon.svg" alt="Крестик" class="popup__close">
+         <div class="popup__container">
+            <p class="popup__edit-form">
+               Редактировать профиль
+            </p>
+            <form class="popup__input">
+               <fieldset class="popup__contact-info">
+                  <input type="text" class="popup__name" value="Жак-Ив Кусто" required>
+                  <input type="text" class="popup__job" value="Исследователь океана" required>
+                  <button type="submit" class="popup__submit">Сохранить</button>
+               </fieldset>
+            </form>
+         </div>
+      </div>
+   </div>
+   <script src="script/script.js"></script>
+</body>
+</html>
