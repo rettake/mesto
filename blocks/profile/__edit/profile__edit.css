@@ -1,7 +1,9 @@
 .profile__edit {
-   margin-left: 18px;
-   margin-bottom: 16px;
+   margin: 0 0 16px 18px;
    transition: opacity .3s linear;
+   background-color: transparent;
+   border: none;
+   padding: 0;
 }
 
 .profile__edit:hover {
@@ -11,5 +13,11 @@
 @media screen and (max-width:767px) {
    .profile__edit {
       margin-left: 0;
+   }
+}
+
+@media screen and (max-width:767px) {
+   .profile__edit img {
+      max-width: 18px;
    }
 }

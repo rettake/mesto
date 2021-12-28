@@ -6,8 +6,20 @@
    box-sizing: border-box;
    padding: 14px 0 18px;
    transition: opacity .3s linear;
+   border: none;
+   cursor: pointer;
+   font-size: 18px;
+   line-height: 22px;
 }
 
 .popup__submit:hover {
    opacity: .8;
+}
+
+@media screen and (max-width:767px) {
+   .popup__submit {
+      font-size: 14px;
+      line-height: 17px;
+      padding: 14px 0 18px;
+   }
 }

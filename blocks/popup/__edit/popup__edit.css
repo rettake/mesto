@@ -1,0 +1,15 @@
+.popup__edit {
+   margin: 0 0 54px 0;
+   font-size: 24px;
+   line-height: 29px;
+   font-weight: 900;
+   color: #000000;
+}
+
+@media screen and (max-width: 767px) {
+   .popup__edit {
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 75px;
+   }
+}

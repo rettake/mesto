@@ -1,22 +1,21 @@
 .elements {
    display: grid;
-   grid-template-columns: repeat(3, 1fr);
+   grid-template-columns: repeat(3, 32%);
    margin-top: 51px;
-   max-width: 100%;
+   min-width: 100%;
    grid-row-gap: 20px;
    grid-column-gap: 17px;
 }
 
 @media screen and (max-width:1279px) {
    .elements {
-      grid-template-columns: 1fr 1fr;
-      grid-column-gap: 0;
+      grid-template-columns: repeat(2, 50%);
    }
 }
 
 @media screen and (max-width:961px) {
    .elements {
-      grid-template-columns: 1fr;
+      grid-template-columns: 100%;
       grid-column-gap: 0;
    }
 }

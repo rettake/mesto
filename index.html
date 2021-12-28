@@ -20,23 +20,28 @@
                   <h1 class="profile__name">
                      Жак-Ив Кусто
                   </h1>
-                  <input type="image" src="images/Editbutton.svg" alt="Изменить" class="profile__edit">
+                  <button type="submit" class="profile__edit"><img src="images/Editbutton.svg" alt="Изменить" ></button>
                </div>
                <p class="profile__job">
                   Исследователь океана
                </p>
             </div>
          </div>
-         <input type="image" src="images/Addbutton.png" alt="Добавить" class="profile__addbutton">
+         <button type="submit" class="profile__addbutton">
+            <picture>
+               <source srcset="images/AddButton600.png" media="(max-width: 600px)">
+               <img srcset="images/Addbutton.png" alt="Добавить">
+            </picture>
+         </button>
       </section>
       <section class="elements">
          <div class="element">
-            <img src="images/karachaevsk.jpg" alt="Карачаевск" class="element__image">
+            <img src="images/karachaevsk.png" alt="Карачаевск" class="element__image">
             <div class="element__info">
                <h3 class="element__place">
                   Карачаевск
                </h3>
-               <input type="image" src="images/likeicon.svg" alt="Лайк" class="element__like">
+               <button type="submit" class="element__like"><img  src="images/likeicon.svg" alt="Лайк"></button>
             </div>
          </div>
 
@@ -46,7 +51,7 @@
                <h3 class="element__place">
                   Гора Эльбрус
                </h3>
-               <input type="image" src="images/likeicon.svg" alt="Лайк" class="element__like">
+               <button type="submit" class="element__like"><img  src="images/likeicon.svg" alt="Лайк"></button>
             </div>
          </div>
 
@@ -56,7 +61,7 @@
                <h3 class="element__place">
                   Домбай
                </h3>
-               <input type="image" src="images/likeicon.svg" alt="Лайк" class="element__like">
+               <button type="submit" class="element__like"><img  src="images/likeicon.svg" alt="Лайк"></button>
             </div>
          </div>
 
@@ -66,7 +71,7 @@
                <h3 class="element__place">
                   Гора Эльбрус
                </h3>
-               <input type="image" src="images/likeicon.svg" alt="Лайк" class="element__like">
+               <button type="submit" class="element__like"><img  src="images/likeicon.svg" alt="Лайк"></button>
             </div>
          </div>
 
@@ -76,17 +81,17 @@
                <h3 class="element__place">
                   Домбай
                </h3>
-               <input type="image" src="images/likeicon.svg" alt="Лайк" class="element__like">
+               <button type="submit" class="element__like"><img  src="images/likeicon.svg" alt="Лайк"></button>
             </div>
          </div>
 
          <div class="element">
-            <img src="images/karachaevsk.jpg" alt="Карачаевск" class="element__image">
+            <img src="images/karachaevsk.png" alt="Карачаевск" class="element__image">
             <div class="element__info">
                <h3 class="element__place">
                   Карачаево-Черкесия
                </h3>
-               <input type="image" src="images/likeicon.svg" alt="Лайк" class="element__like">
+               <button type="submit" class="element__like"><img  src="images/likeicon.svg" alt="Лайк"></button>
             </div>
          </div>
       </section>
@@ -98,15 +103,15 @@
    </footer>
    <div class="popup">
       <div class="popup__container-outer">
-         <input type="image" src="images/CloseIcon.svg" alt="Крестик" class="popup__close">
+         <button type="submit" class="popup__close"><img src="images/CloseIcon.svg" alt="Крестик"></button>
          <div class="popup__container">
-            <p class="popup__edit-form">
+            <h3 class="popup__edit">
                Редактировать профиль
-            </p>
-            <form class="popup__input">
+            </h3>
+            <form class="popup__input" name="contact">
                <fieldset class="popup__contact-info">
-                  <input type="text" class="popup__name" value="Жак-Ив Кусто" required>
-                  <input type="text" class="popup__job" value="Исследователь океана" required>
+                  <input type="text" class="popup__text-area popup__text-area_value-name" name="userName" value="Жак-Ив Кусто" required>
+                  <input type="text" class="popup__text-area popup__text-area_value-job" name="userJob" value="Исследователь океана" required>
                   <button type="submit" class="popup__submit">Сохранить</button>
                </fieldset>
             </form>

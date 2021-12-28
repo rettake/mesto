@@ -2,8 +2,10 @@
    margin-bottom: 8px;
    align-self: flex-end;
    margin-right: -40px;
-   max-width: 32px;
    transition: opacity .3s linear;
+   background-color: transparent;
+   border: none;
+   padding: 0;
 }
 
 .popup__close:hover {
@@ -13,5 +15,12 @@
 @media screen and (max-width: 500px) {
    .popup__close {
       margin-right: 0;
+      margin-bottom: 16px;
+   }
+}
+
+@media screen and (max-width: 500px) {
+   .popup__close img {
+      max-width: 20px;
    }
 }
