@@ -4,12 +4,13 @@
    color: white;
    border-radius: 2px;
    box-sizing: border-box;
-   padding: 14px 0 18px;
+   padding: 12px 0 16px;
    transition: opacity .3s linear;
    border: none;
    cursor: pointer;
    font-size: 18px;
    line-height: 22px;
+   margin-top: 18px;
 }
 
 .popup__submit:hover {
@@ -20,6 +21,7 @@
    .popup__submit {
       font-size: 14px;
       line-height: 17px;
-      padding: 14px 0 18px;
+      padding: 14px 0 14px;
+      width: 100%;
    }
 }

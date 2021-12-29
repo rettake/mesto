@@ -3,3 +3,9 @@
    justify-content: space-between;
    align-content: center; 
 }
+
+@media screen and (max-width:767px) {
+   .profile__info {
+      margin-bottom: 14px;
+   }
+}

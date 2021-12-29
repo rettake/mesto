@@ -17,32 +17,24 @@
             <img src="images/image.jpg" alt="Аватар профиля" class="profile__avatar">
             <div class="profile__info">
                <div class="profile__info-edit">
-                  <h1 class="profile__name">
-                     Жак-Ив Кусто
-                  </h1>
-                  <button type="submit" class="profile__edit"><img src="images/Editbutton.svg" alt="Изменить" ></button>
+                  <h1 class="profile__name">Жак-Ив Кусто</h1>
+                  <button type="button" class="profile__edit"></button>
                </div>
-               <p class="profile__job">
-                  Исследователь океана
-               </p>
+               <p class="profile__job">Исследователь океана</p>
             </div>
          </div>
-         <button type="submit" class="profile__addbutton">
-            <picture>
-               <source srcset="images/AddButton600.png" media="(max-width: 600px)">
-               <img src="images/Addbutton.png" alt="Добавить">
-            </picture>
+         <button type="button" class="profile__addbutton">
          </button>
       </section>
       <section class="elements">
          <div class="element">
             <img src="images/karachaevsk.png" alt="Карачаевск" class="element__image">
             <div class="element__info">
-               <h3 class="element__place">
+               <h3 class="element__place">   
                   Карачаевск
                </h3>
-               <button type="submit" class="element__like"><img  src="images/likeicon.svg" alt="Лайк"></button>
-            </div>
+               <button type="button" class="element__like"><img  src="images/likeicon.svg" alt="Лайк"></button>
+            </div>   
          </div>
 
          <div class="element">
@@ -103,15 +95,15 @@
    </footer>
    <div class="popup">
       <div class="popup__container-outer">
-         <button type="submit" class="popup__close"><img src="images/CloseIcon.svg" alt="Крестик"></button>
+         <button type="button" class="popup__close"></button>
          <div class="popup__container">
-            <h3 class="popup__edit">
+            <h2 class="popup__title">
                Редактировать профиль
-            </h3>
-            <form class="popup__input" name="contact">
+            </h2>
+            <form class="popup__form" name="contact">
                <fieldset class="popup__contact-info">
-                  <input type="text" class="popup__text-area popup__text-area_value-name" name="userName" value="Жак-Ив Кусто" required>
-                  <input type="text" class="popup__text-area popup__text-area_value-job" name="userJob" value="Исследователь океана" required>
+                  <input type="text" class="popup__text-area" name="userName" required>
+                  <input type="text" class="popup__text-area" name="userJob" required>
                   <button type="submit" class="popup__submit">Сохранить</button>
                </fieldset>
             </form>
