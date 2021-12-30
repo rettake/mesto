@@ -16,3 +16,9 @@
       line-height: 17px;
    }
 }
+
+@media screen and (max-width:410px) {
+   .profile__job {
+      max-width: 282px;
+   }
+}
