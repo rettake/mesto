@@ -1,8 +1,11 @@
 let popup = document.querySelector('.popup');
 let popupAdd = document.querySelector('.popup-add')
 let formElement = popup.querySelector('form[name="contact"]');
+let formElementAdd = popupAdd.querySelector('form[name="addimage"]');
 let nameInput = popup.querySelector('input[name="userName"]');
 let jobInput = popup.querySelector('input[name="userJob"]');
+let imageInput = popupAdd.querySelector('input[name="imageUrl"]');
+let placeInput = popupAdd.querySelector('input[name="imageName"]');
 let editButton = document.querySelector('.profile__edit');
 let addButton = document.querySelector('.profile__addbutton');
 let closeButton = popup.querySelector('.popup__close');
@@ -68,6 +71,27 @@ function popupAddOpen() {
    popupAdd.classList.add('popup_opened');
 }
 
+function formSubmitAddImage(evt) {
+   evt.preventDefault();
+   initialCards.push(
+      {
+         name: placeInput.value,
+         link: imageInput.value
+      }
+   );
+   nameInput.value = "";
+   imageInput.value = "";
+
+   popupAddClose();
+
+   const itemElement = elementTemplate.cloneNode(true);
+   
+   itemElement.querySelector('.element__image').src = initialCards[initialCards.length-1].link;
+   itemElement.querySelector('.element__place').textContent = initialCards[initialCards.length-1].name;
+
+   elementsItems.append(itemElement);
+}
+
 function formSubmitHandler(evt) {
    evt.preventDefault();
    
@@ -86,3 +110,5 @@ closeButtonAdd.addEventListener('click', popupAddClose);
 addButton.addEventListener('click', popupAddOpen);
 editButton.addEventListener('click', popupOpen);
 formElement.addEventListener('submit', formSubmitHandler);
+formElementAdd.addEventListener('submit', formSubmitAddImage);
+
