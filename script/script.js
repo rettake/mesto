@@ -50,6 +50,10 @@ initialCards.forEach((initialCard) => {
    itemElement.querySelector('.element__image').src = initialCard.link;
    itemElement.querySelector('.element__place').textContent = initialCard.name;
 
+   itemElement.querySelector('.element__like').addEventListener('click', function (evt) {
+      evt.target.classList.toggle('element__like_like-active')
+   });
+
    elementsItems.append(itemElement);
 })
 
@@ -79,28 +83,31 @@ function formSubmitAddImage(evt) {
          link: imageInput.value
       }
    );
-   nameInput.value = "";
+   placeInput.value = "";
    imageInput.value = "";
 
    popupAddClose();
 
    const itemElement = elementTemplate.cloneNode(true);
-   
-   itemElement.querySelector('.element__image').src = initialCards[initialCards.length-1].link;
-   itemElement.querySelector('.element__place').textContent = initialCards[initialCards.length-1].name;
+
+   itemElement.querySelector('.element__image').src = initialCards[initialCards.length - 1].link;
+   itemElement.querySelector('.element__place').textContent = initialCards[initialCards.length - 1].name;
+
+   itemElement.querySelector('.element__like').addEventListener('click', function (evt) {
+      evt.target.classList.toggle('element__like_like-active')
+   });
 
    elementsItems.append(itemElement);
 }
 
 function formSubmitHandler(evt) {
    evt.preventDefault();
-   
-   profileName.textContent = nameInput.value; 
-   profileJob.textContent = jobInput.value; 
+
+   profileName.textContent = nameInput.value;
+   profileJob.textContent = jobInput.value;
 
    popupClose();
 }
-
 
 
 // Прикрепляем обработчик к форме:
