@@ -10,6 +10,7 @@ let editButton = document.querySelector('.profile__edit');
 let addButton = document.querySelector('.profile__addbutton');
 let closeButton = popup.querySelector('.popup__close');
 let closeButtonAdd = popupAdd.querySelector('.popup__close');
+let deleteButtonAdd = document.querySelector('.element__remove-button');
 let profileName = document.querySelector('.profile__name');
 let profileJob = document.querySelector('.profile__job');
 let elementsItems = document.querySelector('.elements');
@@ -46,12 +47,17 @@ const elementTemplate = document.querySelector('#element').content;
 
 initialCards.forEach((initialCard) => {
    const itemElement = elementTemplate.cloneNode(true);
+   const currentElement = itemElement.querySelector('.element');
 
    itemElement.querySelector('.element__image').src = initialCard.link;
    itemElement.querySelector('.element__place').textContent = initialCard.name;
 
    itemElement.querySelector('.element__like').addEventListener('click', function (evt) {
       evt.target.classList.toggle('element__like_like-active')
+   });
+
+   itemElement.querySelector('.element__remove-button').addEventListener('click', function () {
+      currentElement.remove();
    });
 
    elementsItems.append(itemElement);
@@ -89,12 +95,17 @@ function formSubmitAddImage(evt) {
    popupAddClose();
 
    const itemElement = elementTemplate.cloneNode(true);
+   const currentElement = itemElement.querySelector('.element');
 
    itemElement.querySelector('.element__image').src = initialCards[initialCards.length - 1].link;
    itemElement.querySelector('.element__place').textContent = initialCards[initialCards.length - 1].name;
 
    itemElement.querySelector('.element__like').addEventListener('click', function (evt) {
       evt.target.classList.toggle('element__like_like-active')
+   });
+
+   itemElement.querySelector('.element__remove-button').addEventListener('click', function () {
+      currentElement.remove();
    });
 
    elementsItems.append(itemElement);
