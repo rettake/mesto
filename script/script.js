@@ -9,6 +9,46 @@ let closeButton = popup.querySelector('.popup__close');
 let closeButtonAdd = popupAdd.querySelector('.popup__close');
 let profileName = document.querySelector('.profile__name');
 let profileJob = document.querySelector('.profile__job');
+let elementsItems = document.querySelector('.elements');
+
+const initialCards = [
+   {
+      name: 'Архыз',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+   },
+   {
+      name: 'Челябинская область',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+   },
+   {
+      name: 'Иваново',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+   },
+   {
+      name: 'Камчатка',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+   },
+   {
+      name: 'Холмогорский район',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+   },
+   {
+      name: 'Байкал',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+   }
+];
+
+const elementTemplate = document.querySelector('#element').content;
+
+
+initialCards.forEach((initialCard) => {
+   const itemElement = elementTemplate.cloneNode(true);
+
+   itemElement.querySelector('.element__image').src = initialCard.link;
+   itemElement.querySelector('.element__place').textContent = initialCard.name;
+
+   elementsItems.append(itemElement);
+})
 
 function popupOpen() {
    popup.classList.add('popup_opened');
@@ -37,32 +77,7 @@ function formSubmitHandler(evt) {
    popupClose();
 }
 
-const initialCards = [
-   {
-      name: 'Архыз',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-   },
-   {
-      name: 'Челябинская область',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-   },
-   {
-      name: 'Иваново',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-   },
-   {
-      name: 'Камчатка',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-   },
-   {
-      name: 'Холмогорский район',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-   },
-   {
-      name: 'Байкал',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-   }
- ]; 
+
 
 // Прикрепляем обработчик к форме:
 // он будет следить за событием “submit” - «отправка»
