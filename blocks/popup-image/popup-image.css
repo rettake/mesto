@@ -1,0 +1,10 @@
+.popup-image {
+   display: none;
+   position: fixed;
+   top: 0;
+   left: 0;
+   align-items: center;
+   min-width: 100%;
+   min-height: 100vh;
+   background-color: rgba(0, 0, 0, .9);
+}
