@@ -1,5 +1,5 @@
 let popup = document.querySelector('.popup');
-let popupAdd = document.querySelector('.popup-add');
+let popupAdd = document.querySelector('#popupAdd');
 let popupImage = document.querySelector('.popup-image');
 let formElement = popup.querySelector('form[name="contact"]');
 let formElementAdd = popupAdd.querySelector('form[name="addimage"]');

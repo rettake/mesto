@@ -50,7 +50,6 @@
 /* import for popup */
 
 @import url(../blocks/popup/popup.css);
-@import url(../blocks/popup-add/popup-add.css);
 @import url(../blocks/popup/__close/popup__close.css);
 @import url(../blocks/popup/__contact-info/popup__contact-info.css);
 @import url(../blocks/popup/__container-outer/popup__container-outer.css);
