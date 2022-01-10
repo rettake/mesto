@@ -1,5 +1,6 @@
 let popup = document.querySelector('.popup');
-let popupAdd = document.querySelector('.popup-add')
+let popupAdd = document.querySelector('.popup-add');
+let popupImage = document.querySelector('.popup-image');
 let formElement = popup.querySelector('form[name="contact"]');
 let formElementAdd = popupAdd.querySelector('form[name="addimage"]');
 let nameInput = popup.querySelector('input[name="userName"]');
@@ -60,6 +61,17 @@ initialCards.forEach((initialCard) => {
       currentElement.remove();
    });
 
+   itemElement.querySelector('.element__image').addEventListener('click', function () {
+      popupImage.querySelector('.popup-image__image').src = initialCard.link;
+      popupImage.querySelector('.popup-image__title').textContent = initialCard.name;
+
+      popupImage.classList.add('popup-image_opened');
+
+      popupImage.querySelector('.popup-image__close').addEventListener('click', function() {
+         popupImage.classList.remove('popup-image_opened');
+      });
+   });
+
    elementsItems.append(itemElement);
 })
 
@@ -106,6 +118,17 @@ function formSubmitAddImage(evt) {
 
    itemElement.querySelector('.element__remove-button').addEventListener('click', function () {
       currentElement.remove();
+   });
+
+   itemElement.querySelector('.element__image').addEventListener('click', function () {
+      popupImage.querySelector('.popup-image__image').src = initialCards[initialCards.length - 1].link;
+      popupImage.querySelector('.popup-image__title').textContent = initialCards[initialCards.length - 1].name;
+
+      popupImage.classList.add('popup-image_opened');
+
+      popupImage.querySelector('.popup-image__close').addEventListener('click', function() {
+         popupImage.classList.remove('popup-image_opened');
+      });
    });
 
    elementsItems.append(itemElement);
