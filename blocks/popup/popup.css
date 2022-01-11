@@ -7,17 +7,4 @@
    position: fixed;
    top: 0;
    left: 0;
-   justify-content: center;
-   align-items: center;
-   margin: auto;
-   min-width: 100%;
-   min-height: 100vh;
-   background-color: rgba(0, 0, 0, .5);
-}
-
-@media screen and (max-width:450px) {
-   .popup {
-      padding-left: 19px;
-      padding-right: 19px;
-   }
 }
