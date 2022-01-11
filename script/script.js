@@ -76,20 +76,24 @@ initialCards.forEach((initialCard) => {
    elementsItems.append(itemElement);
 })
 
-function popupOpen() {
-   popupProfile.classList.add('popup_opened');
+function openPopup(popup) {
+   popup.classList.add('popup_opened');
+}
+
+function openProfilePopup() {
+   openPopup(popupProfile);
    nameInput.value = profileName.textContent;
    jobInput.value = profileJob.textContent;
 }
+
+function openAddPopup() {
+   openPopup(popupAdd);
+} 
 
 function popupClose() {
    popupPreview.classList.remove('popup_opened');
    popupProfile.classList.remove('popup_opened');
    popupAdd.classList.remove('popup_opened');
-}
-
-function popupAddOpen() {
-   popupAdd.classList.add('popup_opened');
 }
 
 function formSubmitAddImage(evt) {
@@ -147,8 +151,8 @@ function formSubmitHandler(evt) {
 // он будет следить за событием “submit” - «отправка»
 popupProfileClose.addEventListener('click', popupClose);
 popupAddClose.addEventListener('click', popupClose);
-addButton.addEventListener('click', popupAddOpen);
-editButton.addEventListener('click', popupOpen);
+addButton.addEventListener('click', openAddPopup);
+editButton.addEventListener('click', openProfilePopup);
 formElement.addEventListener('submit', formSubmitHandler);
 formElementAdd.addEventListener('submit', formSubmitAddImage);
 
