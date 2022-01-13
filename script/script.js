@@ -1,20 +1,21 @@
 const popup = document.querySelectorAll('.popup');
+const profile = document.querySelector('.profile');
 const popupProfile = document.querySelector('.popup-profile');
 const popupProfileClose = popupProfile.querySelector('.popup__close');
 const popupAdd = document.querySelector('.popup-add');
 const popupAddClose = popupAdd.querySelector('.popup__close');
 const popupPreview = document.querySelector('.popup-preview');
-const formElement = document.querySelector('form[name="contact"]');
-const formElementAdd = document.querySelector('form[name="addimage"]');
-const nameInput = document.querySelector('input[name="userName"]');
-const jobInput = document.querySelector('input[name="userJob"]');
-const imageInput = document.querySelector('input[name="imageUrl"]');
-const placeInput = document.querySelector('input[name="imageName"]');
-const editButton = document.querySelector('.profile__edit');
-const addButton = document.querySelector('.profile__addbutton');
+const profilePopupForm = popupProfile.querySelector('form[name="contact"]');
+const formElementAdd = popupAdd.querySelector('form[name="addimage"]');
+const nameInput = popupProfile.querySelector('input[name="userName"]');
+const jobInput = popupProfile.querySelector('input[name="userJob"]');
+const imageInput = popupAdd.querySelector('input[name="imageUrl"]');
+const placeInput = popupAdd.querySelector('input[name="imageName"]');
+const editButton = profile.querySelector('.profile__edit');
+const addButton = profile.querySelector('.profile__addbutton');
 const deleteButtonAdd = document.querySelector('.element__remove-button');
-const profileName = document.querySelector('.profile__name');
-const profileJob = document.querySelector('.profile__job');
+const profileName = profile.querySelector('.profile__name');
+const profileJob = profile.querySelector('.profile__job');
 const elementsItems = document.querySelector('.elements');
 
 const initialCards = [
@@ -133,6 +134,6 @@ popupProfileClose.addEventListener('click', popupClose);
 popupAddClose.addEventListener('click', popupClose);
 addButton.addEventListener('click', openAddPopup);
 editButton.addEventListener('click', openProfilePopup);
-formElement.addEventListener('submit', formSubmitHandler);
+profilePopupForm.addEventListener('submit', formSubmitHandler);
 formElementAdd.addEventListener('submit', formSubmitAddImage);
 
