@@ -67,10 +67,10 @@ function createCard(name, link) {
       popupPreview.querySelector('.popup-preview__image').src = link;
       popupPreview.querySelector('.popup-preview__title').textContent = name;
 
-      popupPreview.classList.add('popup_opened');
+      openPopup(popupPreview);
 
       popupPreview.querySelector('.popup__close').addEventListener('click', function() {
-         popupPreview.classList.remove('popup_opened');
+         popupClose(popupPreview);
       });
    });
 
