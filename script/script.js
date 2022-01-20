@@ -18,6 +18,8 @@ const profileName = profile.querySelector('.profile__name');
 const profileJob = profile.querySelector('.profile__job');
 const elementsItems = document.querySelector('.elements');
 
+/* Карточки и их рендер */
+
 const initialCards = [
    {
       name: 'Архыз',
@@ -79,7 +81,26 @@ function createCard(name, link) {
 
 initialCards.forEach((initialCard) => {
    elementsItems.append(createCard(initialCard.name, initialCard.link));
-})
+});
+
+function formSubmitAddImage(evt) {
+   evt.preventDefault();
+   initialCards.push(
+      {
+         name: placeInput.value,
+         link: imageInput.value
+      }
+   );
+   placeInput.value = "";
+   imageInput.value = "";
+
+   popupClose();
+
+   const lastElement = initialCards[initialCards.length - 1]
+   elementsItems.append(createCard(lastElement.name, lastElement.link));
+}
+
+/* Функции открытия/закрытия модальных окон */
 
 function openPopup(popup) {
    popup.classList.add('popup_opened');
@@ -101,22 +122,7 @@ function popupClose() {
    popupAdd.classList.remove('popup_opened');
 }
 
-function formSubmitAddImage(evt) {
-   evt.preventDefault();
-   initialCards.push(
-      {
-         name: placeInput.value,
-         link: imageInput.value
-      }
-   );
-   placeInput.value = "";
-   imageInput.value = "";
-
-   popupClose();
-
-   const lastElement = initialCards[initialCards.length - 1]
-   elementsItems.append(createCard(lastElement.name, lastElement.link));
-}
+/* Функция, которая меняет имя пользователя и род деятельности */
 
 function formSubmitHandler(evt) {
    evt.preventDefault();
