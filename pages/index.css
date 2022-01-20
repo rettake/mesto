@@ -61,7 +61,7 @@
 @import url(../blocks/popup/__text-area/popup__text-area.css);
 @import url(../blocks/popup/__text-area/_error/popup__text-area_error.css);
 @import url(../blocks/popup/form__input-error/form__input-error.css);
-@import url(../blocks/popup/form__input-error/name-input-error/name-input-error.css);
+@import url(../blocks/popup/form__input-error/_active/form__input-error_active.css);
 @import url(../blocks/popup/__submit/popup__submit.css);
 @import url(../blocks/popup/__submit/_disabled/popup__submit_disabled.css);
 @import url(../blocks/popup/__container/popup__container.css);
