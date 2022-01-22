@@ -102,6 +102,19 @@ function formSubmitAddImage(evt) {
 
 /* Функции открытия/закрытия модальных окон */
 
+popup.forEach((popup) => {
+   popup.addEventListener('click', (evt) => {
+      if (evt.target.classList.contains('popup_opened')) {
+         popupClose();
+      }
+   });
+   popup.addEventListener('keydown', (evt) => {
+      if (evt.key === 'Escape') {
+         popupClose();
+      }
+   });
+});
+
 function openPopup(popup) {
    popup.classList.add('popup_opened');
 }
